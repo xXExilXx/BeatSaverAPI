@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BeatSaverAPI.Models
+﻿namespace BeatSaverAPI.Models
 {
     // MapDetail.cs
     public class MapDetail
@@ -13,7 +7,7 @@ namespace BeatSaverAPI.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public MapStats Stats { get; set; }
-        // Add more fields based on the API response
+        public string DownloadUrl => $"https://beatsaver.com/api/download/key/{Id}";
     }
 
     public class MapStats
